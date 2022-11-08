@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fiche form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0 0 20px;
+      font-weight: 400;
+      color: #1c87c9;
+      }
+      p {
+      margin: 0 0 5px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1c87c9;
+      }
+      form {
+      padding: 25px;
+      margin: 25px;
+      box-shadow: 0 2px 5px #f5f5f5; 
+      background: #f5f5f5; 
+      }
+      .fas {
+      margin: 25px 10px 0;
+      font-size: 72px;
+      color: #fff;
+      }
+      .fa-envelope {
+      transform: rotate(-20deg);
+      }
+      .fa-at , .fa-mail-bulk{
+      transform: rotate(10deg);
+      }
+      input, textarea {
+      width: calc(100% - 18px);
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #1c87c9;
+      outline: none;
+      }
+      input::placeholder {
+      color: #666;
+      }
+      button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #1c87c9; 
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      }
+      button:hover {
+      background: #2371a0;
+      }    
+      @media (min-width: 568px) {
+      .main-block {
+      flex-direction: row;
+      }
+      .left-part, form {
+      width: 50%;
+      }
+      .fa-envelope {
+      margin-top: 0;
+      margin-left: 20%;
+      }
+      .fa-at {
+      margin-top: -10%;
+      margin-left: 65%;
+      }
+      .fa-mail-bulk {
+      margin-top: 2%;
+      margin-left: 28%;
+      }
+      .label-text {
+      display: inline-block;
+      align-items: center;
+      flex-direction:row;
+      justify-content: center;
+      align-items: center;
+      }
+      .dropbtn {
+      background-color: #3498DB;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+        }
+
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: #2980B9;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {background-color: #ddd;}
+
+    .show {display: block;}
+</style>
+</head>
+<body>
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-at"></i>
+        <i class="fas fa-mail-bulk"></i>
+      </div>
+      <form action="/">
+        <h1>Fiche</h1>
+        <div class="info">
+          <input class="fname" type="text" name="name" placeholder="object">
+        </div>
+          <fieldset class="label-text">
+            <legend>destination : </legend>
+            <div>
+                <input type="checkbox" id="RH">
+                <label >RH</label>
+            </div>
+            <div>
+              <input type="checkbox" id="MP">
+                <label for="MP">MP</label>
+            </div>
+            <div>
+              <input type="checkbox" id="AS">
+                <label for="AS">AS</label>
+            </div>
+              <div>
+              <input type="checkbox" id="RT">
+              <label for="RT">RT</label>
+            </div>
+        </fieldset>
+          <br><br>
+          <label>type de demande</label>
+        <br><br>
+          <label>droits d'accès</label>
+
+            <select class="label-text" name="fiche" id="fiche">
+            <optgroup label="droits d'accès">
+              <option value="Complete">Complète</option>
+                <optgroup label="Restriction internet">
+                    <option value="Restreint">Whitelist</option>
+                    <option value="Restreint">Blacklist</option></optgroup>
+            </optgroup>
+          </select>
+            <label>matériel</label>
+            <select class="label-text" name="fiche" id="fiche">
+              <option value="pc">hp 6000</option>
+              <option value="pc">Dell thinkpad</option>
+              <option value="pc">asus ROG </option></optgroup>
+          </select>
+          <br><br>
+
+          <input class="fname" type="text" name="name" placeholder="REF d a">
+          <input class="fname" type="text" name="name" placeholder="REF matériel">
+        <p>commentaire</p>
+        <div>
+          <textarea rows="4"></textarea>
+        </div>
+        <button type="submit" href="/">envoyer</button>
+      </form>
+    </div>
+  </body>
+</html>
+

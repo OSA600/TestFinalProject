@@ -47,7 +47,6 @@
       transform: rotate(10deg);
       }
       input, textarea {
-      width: calc(100% - 18px);
       padding: 8px;
       margin-bottom: 20px;
       border: 1px solid #1c87c9;
@@ -94,44 +93,7 @@
       justify-content: center;
       align-items: center;
       }
-      .dropbtn {
-      background-color: #3498DB;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-        }
-
-    .dropbtn:hover, .dropbtn:focus {
-      background-color: #2980B9;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      overflow: auto;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown a:hover {background-color: #ddd;}
-
-    .show {display: block;}
+      }
 </style>
 </head>
 <body>
@@ -148,24 +110,39 @@
         <h1>Fiche</h1>
         <div class="info">
           <input class="fname" type="text" name="name" placeholder="object">
-        </div>
-          <fieldset class="label-text">
-            <legend>destination : </legend>
-            <div>
-                <input type="checkbox" id="RH">
-                <label >RH</label>
-            </div>
-            <div>
-              <input type="checkbox" id="MP">
-                <label for="MP">MP</label>
-            </div>
-            <div>
-              <input type="checkbox" id="AS">
-                <label for="AS">AS</label>
-            </div>
-              <div>
-              <input type="checkbox" id="RT">
-              <label for="RT">RT</label>
+          <br><br>
+        <fieldset class="w-100 m-0 p-0 border-0">
+                <legend class="sr-only">&lt;b&gt;Etape 4&lt;/b&gt; : destination</legend>
+                    <br>
+            <div class="d-flex flex-wrap align-items-center">
+                <input name="multichoice_3[0]" type="hidden" value="0" id="id_multichoice_3_0">
+                <label class="form-check-inline  fitem  ">
+                <input type="hidden" name="multichoice_3[1]" value="0">
+                <input type="checkbox" name="multichoice_3[1]" class="form-check-input " id="id_multichoice_3_1" value="1">
+                RH</label>
+                <span class="form-control-feedback invalid-feedback" id="id_error_multichoice_3_1"></span>
+                <label class="form-check-inline  fitem  ">
+                <input type="hidden" name="multichoice_3[2]" value="0">
+                <input type="checkbox" name="multichoice_3[2]" class="form-check-input " id="id_multichoice_3_2" value="2">
+                MP</label>
+                <span class="form-control-feedback invalid-feedback" id="id_error_multichoice_3_2"></span>
+                <label class="form-check-inline  fitem  ">
+                  <input type="hidden" name="multichoice_3[3]" value="0">
+                <input type="checkbox" name="multichoice_3[3]" class="form-check-input " id="id_multichoice_3_3" value="3">
+                AS</label>
+                <span class="form-control-feedback invalid-feedback" id="id_error_multichoice_3_3"></span>
+                <label class="form-check-inline  fitem  ">
+                <input type="hidden" name="multichoice_3[4]" value="0">
+                <input type="checkbox" name="multichoice_3[4]" class="form-check-input " id="id_multichoice_3_4" value="4">
+                RT</label>
+                <span class="form-control-feedback invalid-feedback" id="id_error_multichoice_3_4"></span>
+                <span id="feedback_item_3"></span>
+              <label class="form-check-inline  fitem  ">
+                <input type="hidden" name="multichoice_3[4]" value="0">
+                <input type="checkbox" name="multichoice_3[4]" class="form-check-input " id="id_multichoice_3_4" value="4">
+                Chef de projet </label>
+                <span class="form-control-feedback invalid-feedback" id="id_error_multichoice_3_4"></span>
+                <span id="feedback_item_3"></span>
             </div>
         </fieldset>
           <br><br>

@@ -1,14 +1,17 @@
 from django.db import models
-from django.utils import timezone
+
 
 # Create your models here.
 class Employees(models.Model):
-    emp_id = models.ForeignKey(Employees, on_delete=models.PROTECT)
     nom = models.CharField(max_length=50)
     prenom = models.CharField(max_length=50)
-    date_de_demarrage = models.DateTimeField
+    dateDeDemarrage = models.DateTimeField
     departement = models.CharField(max_length=50)
+    lieu = models.CharField(max_length=50, default=None)
+    natureDuPoste = models.CharField(max_length=50, default=None)
+    refAcces = models.CharField(max_length=50, default=None)
+    refOrdi = models.CharField(max_length=50, default=None)
+    refPhone = models.CharField(max_length=50, default=None)
 
     def __str__(self):
-        return self.nom, self.prenom, self.departement, self.date_de_demarrage, self.emp_id
-
+        return self.nom, self.prenom, self.departement, self.dateDeDemarrage, self.dateDeDemarrage, self.lieu, self.natureDuPoste, self.refOrdi, self.refPhone, self.refAcces

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+{% csrf_token %}
   <head>
     <title>Fiche form</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
@@ -96,7 +97,6 @@
       }
 </style>
 </head>
-<body>
     </style>
   </head>
   <body>
@@ -106,7 +106,7 @@
         <i class="fas fa-at"></i>
         <i class="fas fa-mail-bulk"></i>
       </div>
-      <form action="/" method="POST">
+      <form action="{% url 'Employee' %}" method="POST">
         <h1>Fiche</h1>
         <div class="info">
           <input class="fname" type="text" name="name" placeholder="object">
@@ -166,8 +166,12 @@
           </select>
           <br><br>
 
+            {% csrf_token %}
           <input class="fname" type="text" name="refAcces" placeholder="REF d a">
           <input class="fname" type="text" name="refOrdi" placeholder="REF matériel">
+          <input class="fname" type="text" name="refPhone" placeholder="REF telePhone">
+
+
 
         <p>commentaire</p>
         <div>
